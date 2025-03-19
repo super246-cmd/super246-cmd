@@ -1,0 +1,14 @@
+graph TD;
+    A[Inicio] --> B[Identificación de Empresas Aliadas];
+    B --> C[Definición de Perfiles de Pasantes];
+    C --> D[Elaboración de Convenios];
+    D --> E[Convocatoria y Difusión];
+    E --> F[Recepción y Evaluación de Postulaciones];
+    F --> G[Selección y Asignación de Pasantes];
+    G --> H[Inducción y Capacitación];
+    H --> I[Desarrollo de la Pasantía];
+    I --> J[Evaluación Periódica];
+    J --> K[Entrega de Informes Finales];
+    K --> L[Certificación y Reconocimiento];
+    L --> M[Análisis de Resultados];
+    M --> N[Fin];
