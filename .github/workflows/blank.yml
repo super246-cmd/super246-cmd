@@ -1,0 +1,76 @@
+class Pasantia:
+    def __init__(self, nombre_candidato):
+        self.nombre_candidato = nombre_candidato
+        self.estado = "Inicio"
+
+    def registro_candidato(self):
+        self.estado = "Registro de Candidato"
+        print(f"{self.nombre_candidato} se ha registrado.")
+
+    def verificacion_requisitos(self):
+        if self.estado == "Registro de Candidato":
+            self.estado = "Verificación de Requisitos"
+            print(f"Se están verificando los requisitos de {self.nombre_candidato}.")
+        else:
+            print("No se ha completado el registro.")
+
+    def evaluacion_perfil(self):
+        if self.estado == "Verificación de Requisitos":
+            self.estado = "Evaluación de Perfil"
+            print(f"Se está evaluando el perfil de {self.nombre_candidato}.")
+        else:
+            print("No se ha completado la verificación de requisitos.")
+
+    def asignacion_pasantias(self):
+        if self.estado == "Evaluación de Perfil":
+            self.estado = "Asignación de Pasantías"
+            print(f"{self.nombre_candidato} ha sido asignado a una pasantía.")
+        else:
+            print("No se ha completado la evaluación del perfil.")
+
+    def evaluacion_empresas(self):
+        if self.estado == "Asignación de Pasantías":
+            self.estado = "Evaluación de Empresas"
+            print(f"Se está evaluando la empresa asignada a {self.nombre_candidato}.")
+        else:
+            print("No se ha completado la asignación de pasantías.")
+
+    def notificacion_candidatos(self):
+        if self.estado == "Evaluación de Empresas":
+            self.estado = "Notificación a Candidatos"
+            print(f"{self.nombre_candidato} ha sido notificado sobre su asignación.")
+        else:
+            print("No se ha completado la evaluación de empresas.")
+
+    def firma_contrato(self):
+        if self.estado == "Notificación a Candidatos":
+            self.estado = "Firma de Contrato"
+            print(f"{self.nombre_candidato} ha firmado el contrato.")
+        else:
+            print("No se ha completado la notificación.")
+
+    def inicio_pasantia(self):
+        if self.estado == "Firma de Contrato":
+            self.estado = "Inicio de Pasantía"
+            print(f"{self.nombre_candidato} ha iniciado su pasantía.")
+        else:
+            print("No se ha completado la firma del contrato.")
+
+    def fin_pasantia(self):
+        if self.estado == "Inicio de Pasantía":
+            self.estado = "Fin de Pasantía"
+            print(f"{self.nombre_candidato} ha completado su pasantía.")
+        else:
+            print("No se ha iniciado la pasantía.")
+
+# Ejemplo de uso
+candidato = Pasantia("Juan Pérez")
+candidato.registro_candidato()
+candidato.verificacion_requisitos()
+candidato.evaluacion_perfil()
+candidato.asignacion_pasantias()
+candidato.evaluacion_empresas()
+candidato.notificacion_candidatos()
+candidato.firma_contrato()
+candidato.inicio_pasantia()
+candidato.fin_pasantia()
